@@ -97,7 +97,6 @@ RUN rm -rf /etc/apt/sources.list && \
 	apt install brave-browser -y && \
 #Ngrok
 	chmod +x /app/ngrok_install.sh && \
-	/app/ngrok_install.sh && \
-ENTRYPOINT ["supervisord", "-c"]
+	/app/ngrok_install.sh && 
 
 CMD ["/app/supervisord.conf"]
