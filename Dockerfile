@@ -16,11 +16,12 @@ ENV DEBIAN_FRONTEND=noninteractive \
 #Ngrok Token (It's advisable to use your personal token, else it may clash with other users & your tunnel may get terminated)
 	NGROK_TOKEN="1zvhIBt8jSSpW7gblgLAjMKjMkS_5Hp8XfEqwUbwDdGd92Yp2" \
 #Locale
-	LANG=fr_FR.UTF-8 \
-	LANGUAGE=fr_FR.UTF-8 \
+	LANG=en_US.UTF-8 \
+	LANGUAGE=en_US.UTF-8 \
 	LC_ALL=C.UTF-8 \
-	TZ="Africa/Algiers"
+	TZ="Asia/Kolkata"
 COPY . /app
+RUN rm -rf /etc/apt/sources.list && \
 RUN rm -rf /etc/apt/sources.list && \
 #All Official Focal Repos
 	bash -c 'echo -e "deb http://archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse\ndeb-src http://archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse\ndeb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse\ndeb-src http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse\ndeb http://archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse\ndeb-src http://archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse\ndeb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse\ndeb-src http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse\ndeb http://archive.canonical.com/ubuntu focal partner\ndeb-src http://archive.canonical.com/ubuntu focal partner" >/etc/apt/sources.list' && \
@@ -60,7 +61,6 @@ RUN rm -rf /etc/apt/sources.list && \
 	gedit \
 	vim-gtk3 \
 	mousepad \
-	libreoffice \
 	pcmanfm \
 	snapd \
 	terminator \
