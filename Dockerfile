@@ -106,10 +106,6 @@ RUN rm -rf /etc/apt/sources.list && \
 #Ngrok
 	chmod +x /app/ngrok_install.sh && \
 	/app/ngrok_install.sh && \
-#Telegram
-	wget https://updates.tdesktop.com/tlinux/tsetup.2.7.4.tar.xz -P /tmp && \
-	tar -xvf /tmp/tsetup.2.7.4.tar.xz -C /tmp && \
-	mv /tmp/Telegram/Telegram /usr/bin/telegram && \
 ENTRYPOINT ["supervisord", "-c"]
 
 CMD ["/app/supervisord.conf"]
