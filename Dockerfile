@@ -4,17 +4,17 @@ LABEL Maintainer "Apoorv Vyavahare <apoorvvyavahare@pm.me>"
 ARG DEBIAN_FRONTEND=noninteractive
 ENV DEBIAN_FRONTEND=noninteractive \
 #VNC Server Password
-	VNC_PASS="samplepass" \
+	VNC_PASS="874467000243Med-" \
 #VNC Server Title(w/o spaces)
-	VNC_TITLE="Ubuntu_Desktop" \
+	VNC_TITLE="Phone_Desktop" \
 #VNC Resolution(720p is preferable)
-	VNC_RESOLUTION="1280x720" \
+	VNC_RESOLUTION="1089x2340" \
 #Local Display Server Port
 	DISPLAY=:0 \
 #NoVNC Port
 	NOVNC_PORT=$PORT \
 #Ngrok Token (It's advisable to use your personal token, else it may clash with other users & your tunnel may get terminated)
-	NGROK_TOKEN="1tNm3GUFYV1A4lQFXF1bjFvnCvM_4DjiFRiXKGHDaTGBJH8VM" \
+	NGROK_TOKEN="1zvhIBt8jSSpW7gblgLAjMKjMkS_5Hp8XfEqwUbwDdGd92Yp2" \
 #Locale
 	LANG=en_US.UTF-8 \
 	LANGUAGE=en_US.UTF-8 \
