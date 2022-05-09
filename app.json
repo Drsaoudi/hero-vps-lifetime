@@ -1,5 +1,5 @@
 {
-    "name": "VNC Ain El Kebira",
+    "name": "VNC ",
     "description": "Fully fledged Ubuntu NoVNC, refer readme for more info.",
     "repository": "https://github.com/Drsaoudi/hero-vps-lifetime.git",
     "logo": "https://imgur.com/1qCGUwK.png",
@@ -12,7 +12,7 @@
         "required" : true
       } ,
       "VNC_PASS": {
-        "description": "874467000243Med-",
+        "description": "",
         "required" : true
       },
       "VNC_RESOLUTION" : {
@@ -21,7 +21,7 @@
         "required" : true
       } ,
       "NGROK_TOKEN" : {
-        "description": "1zvhIBt8jSSpW7gblgLAjMKjMkS_5Hp8XfEqwUbwDdGd92Yp2",
+        "description": "",
         "required" : true
       }
     } 
