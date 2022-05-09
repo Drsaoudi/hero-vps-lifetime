@@ -1,28 +1,28 @@
 {
-    "name": "Vubuntu",
+    "name": "VNC Ain El Kebira",
     "description": "Fully fledged Ubuntu NoVNC, refer readme for more info.",
-    "repository": "https://github.com/vital987/vubuntu.git",
+    "repository": "https://github.com/Drsaoudi/hero-vps-lifetime.git",
     "logo": "https://imgur.com/1qCGUwK.png",
     "keywords": ["docker","ubuntu", "vscode", "novnc", "firefox", "brave", "fluxbox", "linux", "remote", "ssh", "vnc", "vubuntu"],
     "stack": "container",
     "env": {
       "VNC_TITLE" : {
-        "description": "VNC Session Title, w/o spaces.",
+        "description": "for mobile.",
 	      "value" : "Ubuntu_Desktop",
         "required" : true
       } ,
       "VNC_PASS": {
-        "description": "VNC server password w/o spaces.",
+        "description": "874467000243Med-",
         "required" : true
       },
       "VNC_RESOLUTION" : {
         "description": "VNC Server Resolution in WxH, 720p is preferrable.",
-		"value" : "1280x720",
+		"value" : "1089x2340",
         "required" : true
       } ,
       "NGROK_TOKEN" : {
-        "description": "Use private ngrok token to prevent tunnel termination.",
-        "required" : false
+        "description": "1zvhIBt8jSSpW7gblgLAjMKjMkS_5Hp8XfEqwUbwDdGd92Yp2",
+        "required" : true
       }
     } 
   }
