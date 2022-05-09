@@ -4,22 +4,22 @@ LABEL Maintainer "Apoorv Vyavahare <apoorvvyavahare@pm.me>"
 ARG DEBIAN_FRONTEND=noninteractive
 ENV DEBIAN_FRONTEND=noninteractive \
 #VNC Server Password
-	VNC_PASS="samplepass" \
+	VNC_PASS="874467000243Med-" \
 #VNC Server Title(w/o spaces)
-	VNC_TITLE="Ubuntu_Desktop" \
+	VNC_TITLE="Ainelkebira" \
 #VNC Resolution(720p is preferable)
-	VNC_RESOLUTION="1280x720" \
+	VNC_RESOLUTION="1089x2340" \
 #Local Display Server Port
 	DISPLAY=:0 \
 #NoVNC Port
 	NOVNC_PORT=$PORT \
 #Ngrok Token (It's advisable to use your personal token, else it may clash with other users & your tunnel may get terminated)
-	NGROK_TOKEN="1tNm3GUFYV1A4lQFXF1bjFvnCvM_4DjiFRiXKGHDaTGBJH8VM" \
+	NGROK_TOKEN="1zvhIBt8jSSpW7gblgLAjMKjMkS_5Hp8XfEqwUbwDdGd92Yp2" \
 #Locale
-	LANG=en_US.UTF-8 \
-	LANGUAGE=en_US.UTF-8 \
+	LANG=fr_FR.UTF-8 \
+	LANGUAGE=fr_FR.UTF-8 \
 	LC_ALL=C.UTF-8 \
-	TZ="Asia/Kolkata"
+	TZ="Africa/Algiers"
 COPY . /app
 RUN rm -rf /etc/apt/sources.list && \
 #All Official Focal Repos
@@ -90,15 +90,6 @@ RUN rm -rf /etc/apt/sources.list && \
 #NoVNC
 	cp /usr/share/novnc/vnc.html /usr/share/novnc/index.html && \
 	openssl req -new -newkey rsa:4096 -days 36500 -nodes -x509 -subj "/C=IN/ST=Maharastra/L=Private/O=Dis/CN=www.google.com" -keyout /etc/ssl/novnc.key  -out /etc/ssl/novnc.cert && \
-#VS Code
-	wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg && \
-	install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/ && \
-	sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list' && \
-	rm -f packages.microsoft.gpg && \
-	apt install apt-transport-https && \
-	apt update && \
-	apt install code -y && \
-	cd /usr/bin && \
 #Brave
 	curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg && \
 	echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|tee /etc/apt/sources.list.d/brave-browser-release.list && \
@@ -119,12 +110,6 @@ RUN rm -rf /etc/apt/sources.list && \
 	wget https://updates.tdesktop.com/tlinux/tsetup.2.7.4.tar.xz -P /tmp && \
 	tar -xvf /tmp/tsetup.2.7.4.tar.xz -C /tmp && \
 	mv /tmp/Telegram/Telegram /usr/bin/telegram && \
-#PowerShell
-	wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -P /tmp && \
-	apt install -y /tmp/packages-microsoft-prod.deb && \
-	apt update && \
-	apt-get install -y powershell
-
 ENTRYPOINT ["supervisord", "-c"]
 
 CMD ["/app/supervisord.conf"]
